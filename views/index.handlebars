@@ -1,0 +1,51 @@
+<h1 id="masthead">My Language To-Study List</h1>
+
+<div class = "row">
+<div class = "col-sm-6 column1">
+<h2 class="headers">My List</h2>
+<br>
+<ul>
+  {{#each language}}
+    <li>
+      <p>
+        {{this.id}}. {{this.language}}
+
+        <form action="/{{this.id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <button class = "studiedBtn" type="submit">Studied it!</button>
+        </form>
+      </p>
+    </li>
+  {{/each}}
+</ul>
+
+</div>
+
+<div class="col-sm-6 column2">
+
+<h2 class="headers">Add a Language</h2>
+<br>
+<form class="formInput" method="POST" action="/" class="button-size">
+	<textarea type="text" name="language"></textarea>
+  <br>
+	<button class="submit" type="submit">Save</button>
+</form>
+
+<h2 class="headers">Update a Language</h2>
+<br>
+<form class="formInput" action="/?_method=PUT" method="POST" class="button-size">
+  <input type="text" name="id" placeholder="number">
+  <br>
+	<textarea type="text" name="language" placeholder="language"></textarea>
+  <br>
+	<button class="submit" type="submit">Update</button>
+</form>
+</div>
+</div>
+
+<script type="javascript">
+
+
+
+
+</script>
