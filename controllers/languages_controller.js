@@ -29,7 +29,7 @@ router.put("/:id", function(req, res) {
 	var condition = "id = " + req.params.id;
 
 	language.study({
-		studied: req.body.studied
+		studied: 1
 	}, condition, function() {
 		res.redirect("/");
 	});
