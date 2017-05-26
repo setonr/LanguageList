@@ -2,7 +2,7 @@
 
 <div class = "row">
 <div class = "col-sm-4 column1">
-<h2 class="headers">My List</h2>
+<h2 class="headers">To Study</h2>
 <br>
 <ul>
   {{#each language}}
@@ -20,22 +20,10 @@
   {{/each}}
 </ul>
 <br>
-
 </div>
 
 <div class="col-sm-4 column2">
-<h2 class="headers">Add a Language</h2>
-<br>
-<form class="formInput" method="POST" action="/" class="button-size">
-  <textarea type="text" name="language"></textarea>
-  <br>
-  <button class="submit" type="submit">Save</button>
-</form>
-</div>
-
-<div class="col-sm-4 column3">
-
-<h2 class="headers">Languages I've Studied</h2>
+<h2 class="headers">Studied!</h2>
 <br>
 <ul>
   {{#each language}}
@@ -49,4 +37,15 @@
   {{/each}}
 </ul>
 </div>
+
+<div class="col-sm-4 column3">
+<h2 class="headers">Add a Language to My Study List</h2>
+<br>
+<form class="formInput" method="POST" action="/" class="button-size">
+  <textarea type="text" name="language"></textarea>
+  <br>
+  <button class="submit" type="submit">Save</button>
+</form>
+</div>
+
 </div>

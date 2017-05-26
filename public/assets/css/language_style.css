@@ -37,12 +37,12 @@ body {
 ul {
 	list-style-type:none;
 	font-size:25px;
-	text-align:center;
+	text-align:left;
 }
 
 .studiedBtn {
 	font-size:15px;
-	text-align:center;
+	margin-left:30px;
 	color:black;
 }
 
