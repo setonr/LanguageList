@@ -2,7 +2,7 @@ CREATE DATABASE languages_db;
 USE languages_db;
 
 -- Create the table plans.
-CREATE TABLE books
+CREATE TABLE languages
 (
 id int NOT NULL AUTO_INCREMENT,
 language varchar(50) NOT NULL,
