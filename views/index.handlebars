@@ -2,52 +2,49 @@
 <h1 id="masthead">My Language To-Study List</h1>
 </div>
 
+<div class="row">
+  <h2 class="header1">What language would you like to add?</h2>
+  <form class="formInput" method="POST" action="/" class="button-size">
+    <input id="input" type="text" name="language"></input>
+    <button class="submit" type="submit">Add</button>
+  </form>
+</div>
+
+<br><br>
+
 <div class = "row">
-<div class = "col-sm-4 column1">
-<h2 class="headers">To Study</h2>
-<br>
-<ul>
-  {{#each language}}
-    {{#unless this.studied}}
-    <li>
-      <p>
-        {{this.id}}. {{this.language}}
+  <div class= "col-lg-6">
+    <h2 class="headers">To Study<br>(click when studied)</h2>
+    <br>
+    <ul>
+      {{#each language}}
+        {{#unless this.studied}}
+        <li>
+          <form action="/{{this.id}}?_method=PUT" method="POST">
+            <button class = "studiedBtn" type="submit">{{this.language}}</button>
+          </form>
+        </li>
+        {{/unless}}
+      {{/each}}
+    </ul>
+    <br>
+  </div>
 
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <button class = "studiedBtn" type="submit">Studied it!</button>
-        </form>
-      </p>
-    </li>
-    {{/unless}}
-  {{/each}}
-</ul>
-<br>
+  <div class="col-lg-6">
+    <h2 class="headers">Studied<br>(congrats!)</h2>
+    <br>
+    <ul>
+      {{#each language}}
+        {{#if this.studied}}
+        <li>
+          <p class= "listItems">
+           {{this.language}}
+          </p>
+        </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
 </div>
 
-<div class="col-sm-4 column2">
-<h2 class="headers">Studied!</h2>
-<br>
-<ul>
-  {{#each language}}
-    {{#if this.studied}}
-    <li>
-      <p>
-        {{this.id}}. {{this.language}}
-      </p>
-    </li>
-    {{/if}}
-  {{/each}}
-</ul>
-</div>
 
-<div class="col-sm-4 column3">
-<h2 class="headers">Add a Language to My Study List</h2>
-<br>
-<form class="formInput" method="POST" action="/" class="button-size">
-  <textarea type="text" name="language"></textarea>
-  <br>
-  <button class="submit" type="submit">Save</button>
-</form>
-</div>
-
-</div>

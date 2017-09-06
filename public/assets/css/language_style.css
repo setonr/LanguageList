@@ -5,16 +5,26 @@
 body {
 	margin-left:100px;
 	margin-right:100px;
+	font-family: "Righteous";
 }
 
 #masthead {
 	background:url(../images/script.png);
+	border-radius:15px;
 	color:black;
 	text-align:center;
 	padding:30px;
 	font-size:100px;
 	font-weight:bolder;
-	text-shadow:2px 2px 5px #004000
+	font-family: "Satisfy";
+}
+
+.listItems {
+	text-align:center;
+}
+
+.header1 {
+	text-align:center;
 }
 
 .headers {
@@ -22,35 +32,35 @@ body {
 	font-size:50px;
 	font-weight:bold;
 	color:black;
-	text-shadow:2px 2px 5px #004000;
 }
 
 .formInput {
 	text-align:center;
+	font-size:25px;
+}
+
+#input {
+	border-radius:15px;
 }
 
 .submit {
 	margin:auto;
 	text-align:center;
 	color:black;
+	border-radius:15px;
 }
 
 ul {
 	list-style-type:none;
-	font-size:25px;
-	text-align:left;
+	font-size:30px;
 }
 
 .studiedBtn {
-	font-size:15px;
-	margin-left:30px;
+	font-size:30px;
+	text-align:center;
+	margin:auto;
+	margin-bottom:10px;
+	display:block;
 	color:black;
-}
-
-.column1 {
-	padding:0;
-}
-
-.column2 {
-	padding:0;
+	border-radius:15px;
 }
